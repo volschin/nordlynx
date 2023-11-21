@@ -26,7 +26,7 @@ jobs:
       - name: Get Tags
         id: meta
         run: |
-          tags="ghcr.io/${{ github.repository }}:edge
+          tags="ghcr.io/${{ github.repository }}:edge"
           if [[ $(date '+%d') == 01 || "${{ github.event_name }}" == "push" ]]; then
             tags="${tags},ghcr.io/${{ github.repository }}:latest,\
                   ghcr.io/${{ github.repository }}:$(date '+%Y-%m-%d')"
